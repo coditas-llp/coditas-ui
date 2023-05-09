@@ -1,0 +1,35 @@
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .carouselImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        font-weight: bold;
+        background: none;
+        border: none;
+        color: #000000;
+        cursor: pointer;
+        outline: none;
+        right: 0rem;
+      }
+  }
+  @media only screen and (max-width: 440px) {
+    .carousel {
+     
+      button {img{
+        width: 70px;
+      }}
+    }
+  }
+  

@@ -1,0 +1,267 @@
+.navbar-wrapper {
+  width: 100%;
+  z-index: 99 !important;
+  background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+  transition: all 0.2s ease-in;
+  background-size: cover;
+
+  .navbar_container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+
+    .coditas_logo_container {
+      width: 40%;
+      float: left;
+      padding: 10px 0;
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        width: 96px;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+
+      .rect {
+        height: 3px;
+        width: 30px;
+        background: #fff;
+        margin-bottom: 5px;
+        border-radius: 30px;
+      }
+    }
+
+    .navbar_links_container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0;
+        // padding-bottom: 3px;
+      }
+
+      .nav-item {
+        list-style-type: none;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        padding: 0px 10px 15px;
+        color: #fff;
+        min-height: 30px;
+        text-align: center;
+        margin-right: 16px;
+        border-bottom: 2px solid transparent;
+        margin-top: 1rem;
+
+        &.active-b {
+          border-bottom: 2px solid #2c73d6;
+        }
+
+        &.show-b {
+          &:hover {
+            border-bottom: 2px solid #2c73d6;
+            cursor: pointer;
+          }
+        }
+        &.active,
+        &:hover {
+          border-bottom: 2px solid #fff;
+          cursor: pointer;
+        }
+      }
+
+      ul li span {
+        text-decoration: none;
+        padding-top: 15px;
+        color: hsla(0, 0%, 100%, 0.87);
+        min-height: 50px;
+        &:active {
+          border-bottom: 2px solid #fff;
+        }
+        &:hover {
+          cursor: pointer;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .navbar-wrapper {
+    transition: all 0.4s ease-in;
+
+    .navbar_container {
+      max-width: 90%;
+      margin: auto;
+      justify-content: space-between;
+      .coditas_logo_container {
+        img {
+          position: relative;
+          right: 5px;
+        }
+      }
+      .navbar_links_container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        ul {
+          display: unset;
+          justify-content: unset;
+        }
+        .nav-item {
+          text-align: left;
+        }
+
+        ul li span {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          text-decoration: none;
+          padding-top: 15px;
+          color: #2c73d6;
+          min-height: 50px;
+        }
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  }
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    .rect {
+      height: 3px;
+      width: 30px;
+      background: #fff;
+      margin-bottom: 5px;
+      border-radius: 30px;
+
+      &.invertColor {
+        background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+      }
+    }
+  }
+  .navbar_container .navbar_links_container {
+    &.show {
+      top: 54px;
+      left: 0;
+      z-index: 100;
+      padding: 0 10px;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+      text-align: center;
+      transition: all 0.5s;
+      color: #000;
+    }
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    // background: #292954;
+    text-align: center;
+    transition: all 0.5s;
+    color: #000;
+    top: 40px;
+    left: -100%;
+    // padding: 30px;
+
+    ul {
+      display: block;
+      width: 100%;
+      padding: 0;
+
+      li {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+  }
+  .nav-inner {
+    padding-left: 21px;
+  }
+
+  .open {
+    .first {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 10px;
+      transition: all 0.3s linear;
+      right: 0;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .second {
+      right: 0;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 10px;
+      transition: all 0.3s linear;
+      position: absolute;
+    }
+  }
+
+  .navmain {
+    left: -100%;
+    display: flex;
+    display: block;
+  }
+
+  .navbar-mobile.navmain,
+  .navmain {
+    background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    top: 60px;
+    position: fixed;
+    opacity: 1;
+    z-index: 1000;
+    list-style: none;
+    padding-left: 10px;
+    transition: left 0.3s ease-out;
+
+    &.invertColor {
+      .nav-item {
+        color: #fff;
+      }
+    }
+  }
+
+  .navbar-mobile.navmain {
+    left: -2px;
+    display: flex;
+    justify-content: left;
+
+    .nav-item {
+      padding: 10px;
+      margin-right: 16px;
+      margin-top: 1rem;
+      text-align: left;
+    }
+  }
+}
