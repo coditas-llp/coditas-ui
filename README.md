@@ -15,8 +15,8 @@ npm install --save coditas-ui
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'coditas-ui'
-import 'coditas-ui/dist/index.css'
+import { Footer, NavBar } from "coditas-ui";
+import "coditas-ui/dist/index.scss";
 
 class Example extends Component {
   render() {
