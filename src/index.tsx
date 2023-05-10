@@ -1,5 +1,5 @@
 import Accordion from './components/Accordian'
-import Cards from './components/Cards'
+import Cards from './components/Card'
 import Carousel from './components/Carousel'
 import HeroSection from './components/HeroSection'
 import Footer from './components/Footer'

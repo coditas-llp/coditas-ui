@@ -1,4 +1,4 @@
-.cards {
+.card {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -10,10 +10,12 @@
   width: 384px;
   background: #07172d;
   border-radius: 16px;
+
   img {
     width: 48px;
     height: 48px;
   }
+
   p {
     font-family: "Roboto";
     font-style: normal;
@@ -37,7 +39,8 @@
     text-transform: capitalize;
     color: #ffffff;
   }
-  button{
+
+  button {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -51,9 +54,10 @@
 
   }
 }
+
 @media only screen and (max-width: 440px) {
   .cards {
     width: 90%;
-    margin:auto; 
+    margin: auto;
   }
 }
