@@ -37,7 +37,7 @@
     "deploy": "gh-pages -d example/build",
     "build:npm": "rm -rf dist && mkdir dist && babel ./src/ -d dist --extensions \".tsx,.ts\"  --copy-files",
     "publish:npm": "npm run build:npm && npm publish",
-    "build:win":"rmdir /S /Q dist && mkdir dist && babel ./src/ -d dist --extensions \".tsx,.ts\" --copy-files",
+    "build:win": "rmdir /S /Q dist && mkdir dist && babel ./src/ -d dist --extensions \".tsx,.ts\" --copy-files",
     "publish:win": "npm run build:win && npm publish"
   },
   "peerDependencies": {

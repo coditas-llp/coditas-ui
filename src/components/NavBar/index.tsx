@@ -10,7 +10,6 @@ interface MenuItem {
 interface NavBarProps {
   logo: string
   menuItems: MenuItem[]
-
   bgColor?: string
 }
 
