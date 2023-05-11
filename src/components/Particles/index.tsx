@@ -1,20 +1,19 @@
 import React from "react";
 import pJS from './particle'
-const config = require('./config.json')
 
 interface IParticleProps {
-    config?: any
+    config: any
     id?: string;
 }
 
 const Particles = (props: IParticleProps) => {
 
     const init = () => {
-        pJS((props.id || 'main'), config)
+        pJS((props.id || 'main'), props.config)
         const doc = document.getElementById((props.id || 'main'))
         console.log('>> doc', doc);
         if (doc) {
-            window.particlesJS.load('main', config, function () {
+            window.particlesJS.load('main', props.config, function () {
                 console.log('callback - particles.js config loaded');
             });
         }
