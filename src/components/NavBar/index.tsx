@@ -1,19 +1,28 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './NavBar.scss'
-
 interface MenuItem {
-  label: string
-  route: string
+  label?: string
+  href?: string
+  activeRoute?: boolean
+  route?: string
 }
 
 interface NavBarProps {
   logo: string
-  menuItems: MenuItem[]
+  menuItems?: MenuItem[]
+  onLogoClicked?: () => void
   bgColor?: string
+  colorChangeAt?: number
 }
 
-const NavBar: React.FC<NavBarProps> = ({ logo, menuItems, bgColor }) => {
+const NavBar: React.FC<NavBarProps> = ({
+  logo,
+  menuItems,
+  bgColor,
+  onLogoClicked,
+  colorChangeAt
+}) => {
   const history = useNavigate()
   const [showMenu, setShowMenu] = React.useState(false)
   const [changeColor, setChangeColor] = React.useState(false)
@@ -21,7 +30,9 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menuItems, bgColor }) => {
   const backgroundChange = () => {
     const offset = window.scrollY
     if (bgColor === 'transparent') {
-      offset > 25 ? setChangeColor(true) : setChangeColor(false)
+      offset > (colorChangeAt || 25)
+        ? setChangeColor(true)
+        : setChangeColor(false)
     } else {
       offset > 550 ? setChangeColor(true) : setChangeColor(false)
     }
@@ -43,18 +54,27 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menuItems, bgColor }) => {
     >
       <div className='navbar_container'>
         <div className='coditas_logo_container'>
-          <img className={'coditas_logo'} src={logo} alt='logo' />
+          <img
+            className={'coditas_logo'}
+            src={logo}
+            onClick={onLogoClicked}
+            alt='logo'
+          />
         </div>
 
         <div className={`navbar_links_container ${showMenu ? 'show' : 'hide'}`}>
           <ul>
-            {menuItems.map((item, index) => (
+            {menuItems?.map((item, index) => (
               <li
                 key={index}
                 onClick={() => {
-                  history(item.route)
+                  if (item.href) {
+                    window.location.href = item.href
+                    return
+                  }
+                  history(item.route ? item.route : '')
                 }}
-                className={`nav-item`}
+                className={`nav-item ${item.activeRoute ? 'active' : ''}`}
               >
                 {item.label}
               </li>
