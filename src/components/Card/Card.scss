@@ -1,4 +1,5 @@
 .card {
+  background: #1c3b96;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -8,16 +9,14 @@
   padding: 24px;
   margin: 10px;
   width: 384px;
-  background: #07172d;
   border-radius: 16px;
-
   img {
     width: 48px;
     height: 48px;
   }
 
   p {
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -25,12 +24,12 @@
     margin: 0px;
     height: 60px;
     letter-spacing: 0.25px;
-    color: #bbbbbb;
+    color: #dddddd;
   }
 
   h3 {
     margin: 0px;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -48,10 +47,9 @@
     padding: 0px;
     line-height: 140%;
     letter-spacing: 0.25px;
-    color: #2C74D6;
+    color: #ffffff;
     background: transparent;
     border-color: transparent;
-
   }
 }
 

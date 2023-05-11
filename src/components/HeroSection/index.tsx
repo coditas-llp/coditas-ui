@@ -11,6 +11,7 @@ interface HeroSectionProps {
   buttonText?: string
   icons?: string[]
   buttonIcon?: string
+  buttonRoute?: string
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -21,7 +22,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   buttonStyle,
   buttonText,
   icons,
-  buttonIcon
+  buttonIcon,
+  buttonRoute = '/contact-us'
 }) => {
   const history = useNavigate()
 
@@ -47,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {(buttonText || buttonIcon) && (
               <button
                 style={buttonStyle ? buttonStyle : {}}
-                onClick={() => history('/contact-us')}
+                onClick={() => history(buttonRoute)}
                 className='banner-contact_us_button'
               >
                 <p>{buttonText}</p>
