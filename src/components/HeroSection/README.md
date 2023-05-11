@@ -6,11 +6,11 @@
 <HeroSection
   bgImg='/path/to/background/image.jpg'
   heading='This is the heading'
-  styleH1={{ color: 'red' }}
-  paragraph='This is the paragraph text.'
-  buttonStyle={{ backgroundColor: 'blue' }}
-  buttonText='Click me'
-  icons={['/path/to/icon1.png', '/path/to/icon2.png']}
+  styleH1={{ color: 'red' }} //optional
+  paragraph='This is the paragraph text.' //optional
+  buttonStyle={{ backgroundColor: 'blue' }} //optional
+  buttonText='Click me' //optional
+  icons={['/path/to/icon1.png', '/path/to/icon2.png']} //optional
 />
 ```
 

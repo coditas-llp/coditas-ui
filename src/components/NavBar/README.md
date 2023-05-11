@@ -8,9 +8,9 @@ import NavBar from './NavBar'
 
 const App = () => {
   const menuItems = [
-    { label: 'Home' },
-    { label: 'About' },
-    { label: 'Contact' }
+    { label: 'Home', route: '/' },
+    { label: 'About', route: '/about' },
+    { label: 'Contact', route: '/contact-us' }
   ]
 
   return (

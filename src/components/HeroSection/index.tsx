@@ -1,16 +1,16 @@
 import React from 'react'
 import './HeroSection.scss'
 import { useNavigate } from 'react-router-dom'
-import mail from '../../images/mail.png'
 
 interface HeroSectionProps {
   bgImg: string
   heading: string
-  styleH1: React.CSSProperties
+  styleH1?: React.CSSProperties
   paragraph?: string
-  buttonStyle: React.CSSProperties
+  buttonStyle?: React.CSSProperties
   buttonText?: string
-  icons: string[]
+  icons?: string[]
+  buttonIcon?: string
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -20,7 +20,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   paragraph,
   buttonStyle,
   buttonText,
-  icons
+  icons,
+  buttonIcon
 }) => {
   const history = useNavigate()
 
@@ -43,19 +44,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   .split('||')
                   .map((para: string) => <p className='subtext'>{para}</p>)}
             </div>
-            <button
-              style={buttonStyle}
-              onClick={() => history('/contactus')}
-              className='banner-contact_us_button'
-            >
-              {buttonText && <p>{buttonText}</p>}
-              <img src={mail} alt='img' />
-            </button>
+            {(buttonText || buttonIcon) && (
+              <button
+                style={buttonStyle ? buttonStyle : {}}
+                onClick={() => history('/contact-us')}
+                className='banner-contact_us_button'
+              >
+                <p>{buttonText}</p>
+                <img src={buttonIcon} alt='img' />
+              </button>
+            )}
             <div className='subIcons'>
-              <p>Works with</p>
-              {icons.map((icon: string) => (
-                <img alt='cloud' src={icon} />
-              ))}
+              {icons && <p>Works with</p>}
+              {icons &&
+                icons.map((icon: string) => <img alt='cloud' src={icon} />)}
             </div>
           </div>
         </div>
