@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './NavBar.scss'
+import coditas_white from './coditas_white.png'
+import coditas_blue from './coditas_blue.png'
 
 interface MenuItem {
   label?: string
@@ -10,14 +12,15 @@ interface MenuItem {
 }
 
 interface NavBarProps {
-  logo: string
+  logoWhite: string
+  logoBlue: string
   menuItems?: MenuItem[]
   onLogoClicked?: () => void
   bgColor?: string
   colorChangeAt?: number;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ logo, menuItems, bgColor, onLogoClicked, colorChangeAt }) => {
+const NavBar: React.FC<NavBarProps> = ({ logoWhite, logoBlue, menuItems, bgColor, onLogoClicked, colorChangeAt }) => {
   const history = useNavigate()
   const [showMenu, setShowMenu] = React.useState(false)
   const [changeColor, setChangeColor] = React.useState(false)
@@ -36,6 +39,7 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menuItems, bgColor, onLogoClicked
   })
 
   return (
+    
     <div
       className={`navbar-wrapper
      ${changeColor || showMenu ? 'change-color' : ''}
@@ -46,7 +50,7 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menuItems, bgColor, onLogoClicked
     >
       <div className='navbar_container'>
         <div className='coditas_logo_container'>
-          <img className={'coditas_logo'} src={logo} onClick={onLogoClicked} alt='logo' />
+          <img className={'coditas_logo'} src={!changeColor ? (logoWhite || coditas_white) : (logoBlue || coditas_blue)} onClick={onLogoClicked} alt='logo' />
         </div>
 
         <div className={`navbar_links_container ${showMenu ? 'show' : 'hide'}`}>

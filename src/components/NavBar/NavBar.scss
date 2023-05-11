@@ -5,6 +5,7 @@
   transition: all 0.2s ease-in;
   background-size: cover;
   position: fixed;
+
   .navbar_container {
     display: flex;
     max-width: 1200px;
@@ -14,10 +15,12 @@
     .coditas_logo_container {
       width: 40%;
       float: left;
-      padding: 10px 0;
+      padding: 5px 0;
+
       &:hover {
         cursor: pointer;
       }
+
       img {
         width: 96px;
       }
@@ -54,7 +57,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 21px;
-        padding: 0px 10px 15px;
+        padding: 0px 10px 0px;
         color: #fff;
         min-height: 30px;
         text-align: center;
@@ -72,6 +75,7 @@
             cursor: pointer;
           }
         }
+
         &.active,
         &:hover {
           border-bottom: 2px solid #fff;
@@ -84,9 +88,11 @@
         padding-top: 15px;
         color: hsla(0, 0%, 100%, 0.87);
         min-height: 50px;
+
         &:active {
           border-bottom: 2px solid #fff;
         }
+
         &:hover {
           cursor: pointer;
           border-bottom: 1px solid #fff;
@@ -100,6 +106,7 @@
   background: white;
   transition: all 0.2s ease-in;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
   .navbar_container {
     .coditas_logo_container {
       .coditas_logo {
@@ -126,7 +133,9 @@
     }
   }
 }
+
 .bgBlue {
+
   // background: linear-gradient(96.87deg, #2c73d6, #2365bd);
   .navbar_container {
     padding: 0px 128px;
@@ -136,6 +145,7 @@
     // margin: auto;
   }
 }
+
 .bgTrans {
   .navbar_container {
     padding: 0px 128px;
@@ -145,6 +155,7 @@
     // min-width: 80%;
     // margin: auto;
   }
+
   background: transparent;
 }
 
@@ -154,24 +165,33 @@
 
     .navbar_container {
       max-width: 90%;
+      padding: 0;
       margin: auto;
       justify-content: space-between;
+
       .coditas_logo_container {
+        padding: 10px 0;
+        margin-left: -25px;
+
         img {
           position: relative;
           right: 5px;
         }
       }
+
       .navbar_links_container {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
+
         ul {
           display: unset;
           justify-content: unset;
         }
+
         .nav-item {
           text-align: left;
+          font-size: 18px;
         }
 
         ul li span {
@@ -184,6 +204,7 @@
           min-height: 50px;
         }
       }
+
       .menu-toggle {
         display: block;
       }
@@ -197,6 +218,7 @@
     position: absolute;
     right: 20px;
     top: 20px;
+
     .rect {
       height: 3px;
       width: 30px;
@@ -209,6 +231,7 @@
       }
     }
   }
+
   .navbar_container .navbar_links_container {
     &.show {
       top: 54px;
@@ -218,7 +241,7 @@
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+      background: white;
       text-align: center;
       transition: all 0.5s;
       color: #000;
@@ -244,6 +267,7 @@
       }
     }
   }
+
   .nav-inner {
     padding-left: 21px;
   }
