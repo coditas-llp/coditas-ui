@@ -51,11 +51,10 @@ const NavBar: React.FC<NavBarProps> = ({
     <div
       className={`navbar-wrapper
      ${changeColor || showMenu ? 'change-color' : ''}
-      ${
-        bgColor
+      ${bgColor
           ? bgColor === 'transparent' && (!changeColor ? 'bgTrans' : 'bgBlue')
           : ''
-      }`}
+        }`}
     >
       <div className='navbar_container'>
         <div className='coditas_logo_container'>
@@ -88,11 +87,10 @@ const NavBar: React.FC<NavBarProps> = ({
                 {item.label}
               </li>
             ))}
-            {/* onClick={() => { setShowMenu(false)}} */}
           </ul>
         </div>
         <div
-          className={`menuColor`}
+          className={`menuColor ${showMenu ? "open" : ""} ${!changeColor ? '' : 'menu-blue'}`}
           id='menu-toggle'
           onClick={() => setShowMenu(!showMenu)}
         >
@@ -104,5 +102,7 @@ const NavBar: React.FC<NavBarProps> = ({
     </div>
   )
 }
+
+
 
 export default NavBar

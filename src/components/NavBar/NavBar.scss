@@ -218,6 +218,8 @@
     right: 20px;
     top: 20px;
 
+
+
     .rect {
       height: 3px;
       width: 30px;
@@ -264,6 +266,13 @@
         padding: 10px;
         text-align: left;
       }
+    }
+  }
+
+  #menu-toggle.menu-blue {
+    .rect {
+      background: #2c73d6;
+
     }
   }
 
