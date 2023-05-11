@@ -12,16 +12,4 @@ declare module "*.json" {
     export default path;
 }
 
-export { };
 
-declare global {
-    interface Window {
-        particlesJS: any;
-    }
-    interface Function {
-        resource: string;
-    }
-    interface BaseModel {
-        myFunction: () => void;
-    }
-}
