@@ -12,8 +12,8 @@ interface MenuItem {
 }
 
 interface NavBarProps {
-  logoWhite: string
-  logoBlue: string
+  logoWhite?: string
+  logoBlue?: string
   menuItems?: MenuItem[]
   onLogoClicked?: () => void
   bgColor?: string
