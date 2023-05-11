@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './NavBar.scss'
+import coditas_white from './coditas_white.png'
+import coditas_blue from './coditas_blue.png'
+
 interface MenuItem {
   label?: string
   href?: string
@@ -9,7 +12,8 @@ interface MenuItem {
 }
 
 interface NavBarProps {
-  logo: string
+  logoWhite: string
+  logoBlue: string
   menuItems?: MenuItem[]
   onLogoClicked?: () => void
   bgColor?: string
@@ -17,7 +21,8 @@ interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = ({
-  logo,
+  logoWhite,
+  logoBlue,
   menuItems,
   bgColor,
   onLogoClicked,
@@ -56,7 +61,11 @@ const NavBar: React.FC<NavBarProps> = ({
         <div className='coditas_logo_container'>
           <img
             className={'coditas_logo'}
-            src={logo}
+            src={
+              !changeColor
+                ? logoWhite || coditas_white
+                : logoBlue || coditas_blue
+            }
             onClick={onLogoClicked}
             alt='logo'
           />
