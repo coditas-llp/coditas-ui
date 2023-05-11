@@ -1,6 +1,6 @@
 {
   "name": "coditas-ui",
-  "version": "1.0.8",
+  "version": "1.0.11",
   "description": "It is the in development ui library for Coditas Website UI",
   "author": "Ayushi Midha + Harish Soni",
   "repository": {
@@ -36,7 +36,9 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
     "build:npm": "rm -rf dist && mkdir dist && babel ./src/ -d dist --extensions \".tsx,.ts\"  --copy-files",
-    "publish:npm": "npm run build:npm && npm publish"
+    "publish:npm": "npm run build:npm && npm publish",
+    "build:win":"rmdir /S /Q dist && mkdir dist && babel ./src/ -d dist --extensions \".tsx,.ts\" --copy-files",
+    "publish:win": "npm run build:win && npm publish"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -79,7 +81,7 @@
     "dist"
   ],
   "dependencies": {
-    "node-sass": "^8.0.0",
+    "node-sass": "^6.0.1",
     "react-router-dom": "^6.11.1"
   }
 }
