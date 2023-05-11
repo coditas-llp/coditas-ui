@@ -9,20 +9,25 @@ if [[ $and -eq "y" ]]
 
     read cMsg
 
-    git commit -m "$cMsg"
 
-    echo "Do you want to publish now?"
-
-    read pub
-
-    if [[ &pub -eq "y" ]]
+    if [[ $pub -eq "y" ]]
     then
+        git commit -m "$cMsg"
+
+        echo "Do you want to publish now?"
+
+        read pub
+ 
         echo "Have you changed the Package Version in package.json?"
+ 
         read change
 
         if [[ $change -eq "y" ]]
         then
             echo "Starting the publish the code...!!!"
 
-            npm run build:npm && npm publish
+            npm run build:npm
+            npm publish
+        fi
+    fi
 fi
