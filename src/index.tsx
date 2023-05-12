@@ -4,15 +4,6 @@ import Carousel from './components/Carousel'
 import HeroSection from './components/HeroSection'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
-import ParticlesBanner from './components/Particles'
 import './index.scss'
 
-export {
-  Accordion,
-  Cards,
-  Carousel,
-  HeroSection,
-  Footer,
-  NavBar,
-  ParticlesBanner
-}
+export { Accordion, Cards, Carousel, HeroSection, Footer, NavBar }
