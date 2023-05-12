@@ -82,6 +82,8 @@
   ],
   "dependencies": {
     "node-sass": "^6.0.1",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "react-tsparticles": "^2.9.3",
+    "tsparticles": "^2.9.3"
   }
 }
