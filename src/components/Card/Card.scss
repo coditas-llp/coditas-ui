@@ -51,6 +51,22 @@
     background: transparent;
     border-color: transparent;
   }
+  &:hover {
+    background: #ffffff;
+    img {
+      filter: brightness(0) saturate(100%) invert(37%) sepia(27%)
+        saturate(2892%) hue-rotate(189deg) brightness(99%) contrast(85%);
+    }
+    h3 {
+      color: #07172d;
+    }
+    p {
+      color: #444444;
+    }
+    button {
+      color: #2c74d6;
+    }
+  }
 }
 
 @media only screen and (max-width: 440px) {
