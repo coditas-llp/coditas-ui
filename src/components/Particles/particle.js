@@ -1,3 +1,13 @@
+
+var check
+
+var requestAnimFrame = (function () { return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) { window.setTimeout(callback, 1000 / 60) } })();
+
+var cancelRequestAnimFrame = (function () { return window.cancelAnimationFrame || window.webkitCancelRequestAnimationFrame || window.mozCancelRequestAnimationFrame || window.oCancelRequestAnimationFrame || window.msCancelRequestAnimationFrame || clearTimeout })(); function hexToRgb(hex) { var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i; hex = hex.replace(shorthandRegex, function (m, r, g, b) { return r + r + g + g + b + b }); var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); return result ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) } : null }; function clamp(number, min, max) { return Math.min(Math.max(number, min), max) }; function isInArray(value, array) { return array.indexOf(value) > -1 }
+
+var pJSDom = [];
+
+
 var pJS = function (tag_id, params) {
     var canvas_el = document.querySelector('#' + tag_id + ' > .particles-js-canvas-el'); this.pJS = { canvas: { el: canvas_el, w: canvas_el.offsetWidth, h: canvas_el.offsetHeight }, particles: { number: { value: 400, density: { enable: !0, value_area: 800 } }, color: { value: '#fff' }, shape: { type: 'circle', stroke: { width: 0, color: '#ff0000' }, polygon: { nb_sides: 5 }, image: { src: '', width: 100, height: 100 } }, opacity: { value: 1, random: !1, anim: { enable: !1, speed: 2, opacity_min: 0, sync: !1 } }, size: { value: 20, random: !1, anim: { enable: !1, speed: 20, size_min: 0, sync: !1 } }, line_linked: { enable: !0, distance: 100, color: '#fff', opacity: 1, width: 1 }, move: { enable: !0, speed: 2, direction: 'none', random: !1, straight: !1, out_mode: 'out', bounce: !1, attract: { enable: !1, rotateX: 3000, rotateY: 3000 } }, array: [] }, interactivity: { detect_on: 'canvas', events: { onhover: { enable: !0, mode: 'grab' }, onclick: { enable: !0, mode: 'push' }, resize: !0 }, modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 200, size: 80, duration: 0.4 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }, mouse: {} }, retina_detect: !1, fn: { interact: {}, modes: {}, vendors: {} }, tmp: {} }; var pJS = this.pJS; if (params) { Object.deepExtend(pJS, params) }
     pJS.tmp.obj = { size_value: pJS.particles.size.value, size_anim_speed: pJS.particles.size.anim.speed, move_speed: pJS.particles.move.speed, line_linked_distance: pJS.particles.line_linked.distance, line_linked_width: pJS.particles.line_linked.width, mode_grab_distance: pJS.interactivity.modes.grab.distance, mode_bubble_distance: pJS.interactivity.modes.bubble.distance, mode_bubble_size: pJS.interactivity.modes.bubble.size, mode_repulse_distance: pJS.interactivity.modes.repulse.distance }; pJS.fn.retinaInit = function () {
@@ -167,12 +177,11 @@ var pJS = function (tag_id, params) {
 }; Object.deepExtend = function (destination, source) {
     for (var property in source) { if (source[property] && source[property].constructor && source[property].constructor === Object) { destination[property] = destination[property] || {}; arguments.callee(destination[property], source[property]) } else { destination[property] = source[property] } }
     return destination
-}; window.requestAnimFrame = (function () { return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) { window.setTimeout(callback, 1000 / 60) } })(); window.cancelRequestAnimFrame = (function () { return window.cancelAnimationFrame || window.webkitCancelRequestAnimationFrame || window.mozCancelRequestAnimationFrame || window.oCancelRequestAnimationFrame || window.msCancelRequestAnimationFrame || clearTimeout })(); function hexToRgb(hex) { var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i; hex = hex.replace(shorthandRegex, function (m, r, g, b) { return r + r + g + g + b + b }); var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); return result ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) } : null }; function clamp(number, min, max) { return Math.min(Math.max(number, min), max) }; function isInArray(value, array) { return array.indexOf(value) > -1 }
-window.pJSDom = []; window.particlesJS = function (tag_id, params) {
+};
+
+window.particlesJS = function (tag_id, params) {
     if (typeof (tag_id) != 'string') { params = tag_id; tag_id = 'particles-js' }
     if (!tag_id) { tag_id = 'particles-js' }
     var pJS_tag = document.getElementById(tag_id), pJS_canvas_class = 'particles-js-canvas-el', exist_canvas = pJS_tag.getElementsByClassName(pJS_canvas_class); if (exist_canvas.length) { while (exist_canvas.length > 0) { pJS_tag.removeChild(exist_canvas[0]) } }
     var canvas_el = document.createElement('canvas'); canvas_el.className = pJS_canvas_class; canvas_el.style.width = "100%"; canvas_el.style.height = "100%"; canvas_el.style.position = "absolute"; canvas_el.style.top = "0"; var canvas = document.getElementById(tag_id).appendChild(canvas_el); if (canvas != null) { pJSDom.push(new pJS(tag_id, params)) }
 }; window.particlesJS.load = function (tag_id, path_config_json, callback) { var xhr = new XMLHttpRequest(); xhr.open('GET', path_config_json); xhr.onreadystatechange = function (data) { if (xhr.readyState == 4) { if (xhr.status == 200) { var params = path_config_json; window.particlesJS(tag_id, params); if (callback) callback() } else { console.log('Error pJS - XMLHttpRequest status: ' + xhr.status); console.log('Error pJS - File config not found') } } }; xhr.send() }
-
-export default pJS

@@ -1,5 +1,5 @@
 import React from "react";
-import pJS from './particle'
+import config from './config.json'
 
 interface IParticleProps {
     config: any
@@ -9,19 +9,20 @@ interface IParticleProps {
 const Particles = (props: IParticleProps) => {
 
     const init = () => {
-        pJS((props.id || 'main'), props.config)
         const doc = document.getElementById((props.id || 'main'))
-        console.log('>> doc', doc);
         if (doc) {
-            window.particlesJS.load('main', props.config, function () {
-                console.log('callback - particles.js config loaded');
-            });
+            try {
+                window.particlesJS.load((props.id || 'main'), (props.config || config), function () {
+                    console.log('callback - particles.js config loaded');
+                });
+            } catch (error) {
+                console.error(`The Particle.js is missing in the module, please add  ==> require('coditas-ui/dist/components/Particles/particle') <== to the file you want to use Particles`)
+            }
         }
     }
 
     React.useEffect(() => {
         init()
-
     })
     return <div id="main" />
 }
