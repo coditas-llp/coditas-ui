@@ -34,14 +34,11 @@ const Accordion = (props: IAccordionProps) => {
         <div className='accordion-toggle'>
           {active === props.index ? (
             <img
-              src={require(props.signColor === 'white' ? RemoveW : Remove)}
+              src={props.signColor === 'white' ? RemoveW : Remove}
               alt='remove'
             />
           ) : (
-            <img
-              src={require(props.signColor === 'white' ? AddW : Add)}
-              alt='add'
-            />
+            <img src={props.signColor === 'white' ? AddW : Add} alt='add' />
           )}
         </div>
       </div>
