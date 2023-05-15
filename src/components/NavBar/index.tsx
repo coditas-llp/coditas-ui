@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './NavBar.scss'
-import coditas_white from './coditas_white.png'
-import coditas_blue from './coditas_blue.png'
+import coditas_white from 'coditas_white.png'
+import coditas_blue from 'coditas_blue.png'
 
 interface MenuItem {
   label?: string
@@ -51,20 +51,19 @@ const NavBar: React.FC<NavBarProps> = ({
     <div
       className={`navbar-wrapper
      ${changeColor || showMenu ? 'change-color' : ''}
-      ${bgColor
+      ${
+        bgColor
           ? bgColor === 'transparent' && (!changeColor ? 'bgTrans' : 'bgBlue')
           : ''
-        }`}
+      }`}
     >
       <div className='navbar_container'>
         <div className='coditas_logo_container'>
           <img
             className={'coditas_logo'}
-            src={
-              !changeColor
-                ? logoWhite || coditas_white
-                : logoBlue || coditas_blue
-            }
+            src={require(!changeColor
+              ? logoWhite || coditas_white
+              : logoBlue || coditas_blue)}
             onClick={onLogoClicked}
             alt='logo'
           />
@@ -90,7 +89,9 @@ const NavBar: React.FC<NavBarProps> = ({
           </ul>
         </div>
         <div
-          className={`menuColor ${showMenu ? "open" : ""} ${!changeColor ? '' : 'menu-blue'}`}
+          className={`menuColor ${showMenu ? 'open' : ''} ${
+            !changeColor ? '' : 'menu-blue'
+          }`}
           id='menu-toggle'
           onClick={() => setShowMenu(!showMenu)}
         >
@@ -102,7 +103,5 @@ const NavBar: React.FC<NavBarProps> = ({
     </div>
   )
 }
-
-
 
 export default NavBar
