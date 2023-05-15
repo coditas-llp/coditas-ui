@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './Accordian.scss'
-import Add from '../../images/add.svg'
-import Remove from '../../images/remove.svg'
-import AddW from '../../images/addW.svg'
-import RemoveW from '../../images/removeW.svg'
+import Add from 'add.svg'
+import Remove from 'remove.svg'
+import AddW from 'addW.svg'
+import RemoveW from 'removeW.svg'
 
 interface IAccordionProps {
   index: number
@@ -34,11 +34,14 @@ const Accordion = (props: IAccordionProps) => {
         <div className='accordion-toggle'>
           {active === props.index ? (
             <img
-              src={props.signColor === 'white' ? RemoveW : Remove}
+              src={require(props.signColor === 'white' ? RemoveW : Remove)}
               alt='remove'
             />
           ) : (
-            <img src={props.signColor === 'white' ? AddW : Add} alt='add' />
+            <img
+              src={require(props.signColor === 'white' ? AddW : Add)}
+              alt='add'
+            />
           )}
         </div>
       </div>
