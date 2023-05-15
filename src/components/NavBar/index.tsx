@@ -61,9 +61,11 @@ const NavBar: React.FC<NavBarProps> = ({
         <div className='coditas_logo_container'>
           <img
             className={'coditas_logo'}
-            src={require(!changeColor
-              ? logoWhite || coditas_white
-              : logoBlue || coditas_blue)}
+            src={
+              !changeColor
+                ? logoWhite || coditas_white
+                : logoBlue || coditas_blue
+            }
             onClick={onLogoClicked}
             alt='logo'
           />
