@@ -1,11 +1,11 @@
 {
   "name": "coditas-ui",
-  "version": "1.0.50",
+  "version": "1.0.55",
   "description": "It is the in development ui library for Coditas Website UI",
   "author": "Ayushi Midha + Harish Soni",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harish-soni/coditas-ui.git"
+    "url": "git+https://github.com/coditas-llp/coditas-ui.git"
   },
   "keywords": [
     "react",
