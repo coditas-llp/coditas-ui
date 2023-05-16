@@ -99,6 +99,7 @@
           bottom: 0;
           max-width: 100%;
           padding: 20px;
+          gap: 16px;
           h1 {
             font-size: 20px;
           }
@@ -113,6 +114,9 @@
             p {
               font-size: 14px;
             }
+          }
+          .subIcons {
+            gap: 8px;
           }
         }
       }
