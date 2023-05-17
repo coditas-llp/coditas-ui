@@ -56,7 +56,7 @@ const NavBar: React.FC<NavBarProps> = ({
       ${
         bgColor
           ? bgColor === 'transparent' && (!changeColor ? 'bgTrans' : 'bgBlue')
-          : ''
+          : 'bgBlue'
       }`}
     >
       <div className='navbar_container'>

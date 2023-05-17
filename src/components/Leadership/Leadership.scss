@@ -1,0 +1,135 @@
+.leadership {
+  position: relative;
+  background: #07172d;
+  color: #ffffff;
+  display: flex;
+  .content-section {
+    padding: 64px 0px 0px 128px;
+    width: 55%;
+    h1 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 120%;
+      /* identical to box height, or 77px */
+
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+
+      letter-spacing: 0.25px;
+    }
+    hr {
+      width: 30%;
+      float: left;
+      border-width: 2px;
+      border-color: #2c74d6;
+    }
+    .quotes {
+      position: absolute;
+      left: 79px;
+      top: 42%;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      .linkedIn {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .designation {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          /* or 24px */
+
+          letter-spacing: 0.25px;
+        }
+        .leader-name {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 120%;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .leaderInfo {
+    .details {
+      display: none;
+    }
+  }
+  .leaderImg {
+    width: 70%;
+    height: 100%;
+    float: right;
+  }
+}
+@media only screen and (max-width: 1048px) {
+  .leadership {
+    position: relative;
+    background-color: #ffffff;
+    color: #07172d;
+    display: block;
+    .content-section {
+      padding: 64px 16px;
+      width: unset;
+      .quotes {
+        display: none;
+      }
+      hr {
+        display: none;
+      }
+      .content {
+        .linkedIn {
+          display: none;
+        }
+      }
+    }
+    .leaderInfo {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      .details {
+        display: unset;
+        position: absolute;
+        bottom: 13px;
+        padding: 0px 0px 0px 16px;
+        width: 33%;
+      }
+      .leader-name {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        margin-bottom: 2px;
+        letter-spacing: 0.5px;
+      }
+      .designation {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: 0.25px;
+        color: #07172d;
+        margin: 4px;
+      }
+      .leaderImg {
+        width: 100%;
+      }
+    }
+  }
+}

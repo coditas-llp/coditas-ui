@@ -6,7 +6,8 @@ import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import Particles from './components/Particles'
 import VerticalCarousel from './components/VerticalCarousel'
-
+import Leadership from './components/Leadership'
+import Locations from './components/Locations'
 import './index.scss'
 
 export {
@@ -17,5 +18,7 @@ export {
   Footer,
   NavBar,
   Particles,
-  VerticalCarousel
+  VerticalCarousel,
+  Leadership,
+  Locations
 }
