@@ -1,6 +1,7 @@
 import React from 'react'
-import { company, work, social } from './TobeRemoved'
+import { company, work, otherVerical, others } from './TobeRemoved'
 import './Footer.scss'
+import link from 'link.svg'
 interface CompanyData {
   active_link: string
   link: string
@@ -89,18 +90,18 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
           <div className={'links'}>
             <FooterTitle
-              label='Social Media'
+              label='Others'
               isMobile={isMobile}
               setExpand={setExpand}
               expand={expand}
             />
             <ul
               className={`${'mobile-view'}  ${
-                expand === 'Social Media' && 'expanded'
+                expand === 'Others' && 'expanded'
               }`}
             >
               {/* fetching links from array using map */}
-              {social.map((data: CompanyData, i: any) => (
+              {others.map((data: CompanyData, i: any) => (
                 <a
                   target='_blank'
                   rel='noreferrer'
@@ -108,6 +109,33 @@ const Footer: React.FC<FooterProps> = () => {
                   href={data.active_link}
                 >
                   <li key={i}>{data.link}</li>
+                  <img alt='link' className='link-icon' src={link}></img>
+                </a>
+              ))}
+            </ul>
+          </div>
+          <div className={'links'}>
+            <FooterTitle
+              label='Other vertical'
+              isMobile={isMobile}
+              setExpand={setExpand}
+              expand={expand}
+            />
+            <ul
+              className={`${'mobile-view'}  ${
+                expand === 'Other vertical' && 'expanded'
+              }`}
+            >
+              {/* fetching links from array using map */}
+              {otherVerical.map((data: CompanyData, i: any) => (
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  key={i}
+                  href={data.active_link}
+                >
+                  <li key={i}>{data.link}</li>
+                  <img alt='link' className='link-icon' src={link}></img>
                 </a>
               ))}
             </ul>

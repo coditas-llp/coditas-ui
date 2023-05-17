@@ -55,23 +55,31 @@ export const office_address = [
     },
     
   ];
-  export const social = [
+  export const others = [
     {
-      link: 'LinkedIn',
-      active_link: 'https://www.linkedin.com/company/coditas/',
+      link: 'Privacy Policy',
+      active_link: 'https://coditas.com/#/privacy-policy',
+    },
+   
+  ];
+  export const otherVerical = [
+    {
+      link: 'Coditas UX',
+      active_link: 'https://coditas.com/#/privacy-policy',
     },
     {
-      link: 'Instagram',
-      active_link: 'https://www.instagram.com/coditas_hq/',
+      link: 'Coditas Healthcare',
+      active_link: 'https://coditas.com/#/privacy-policy',
     },
     {
-      link: 'Facebook',
-      active_link: 'https://www.facebook.com/Coditas/',
+      link: 'Coditas DevOps',
+      active_link: 'https://coditas.com/#/privacy-policy',
     },
     {
-      link: 'Twitter',
-      active_link: 'https://twitter.com/coditashq',
+      link: 'Coditas Data & AI',
+      active_link: 'https://coditas.com/#/privacy-policy',
     },
+   
   ];
   export const res = [
     {
