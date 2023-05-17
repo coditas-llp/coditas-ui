@@ -117,6 +117,11 @@
     .navbar_links_container {
       .nav-item {
         color: #2c73d6;
+        &.active,
+        &:hover {
+          border-bottom: 2px solid #2c73d6;
+          cursor: pointer;
+        }
       }
 
       ul li span {
@@ -135,7 +140,6 @@
 }
 
 .bgBlue {
-
   // background: linear-gradient(96.87deg, #2c73d6, #2365bd);
   .navbar_container {
     padding: 0px 128px;
@@ -218,8 +222,6 @@
     right: 20px;
     top: 20px;
 
-
-
     .rect {
       height: 3px;
       width: 30px;
@@ -272,7 +274,6 @@
   #menu-toggle.menu-blue {
     .rect {
       background: #2c73d6;
-
     }
   }
 

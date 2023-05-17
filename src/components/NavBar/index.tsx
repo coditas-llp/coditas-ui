@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import './NavBar.scss'
 import coditas_white from 'coditas_white.png'
 import coditas_blue from 'coditas_blue.png'
@@ -29,6 +29,8 @@ const NavBar: React.FC<NavBarProps> = ({
   colorChangeAt
 }) => {
   const history = useNavigate()
+  const location = useLocation()
+
   const [showMenu, setShowMenu] = React.useState(false)
   const [changeColor, setChangeColor] = React.useState(false)
 
@@ -83,7 +85,9 @@ const NavBar: React.FC<NavBarProps> = ({
                   }
                   history(item.route ? item.route : '')
                 }}
-                className={`nav-item ${item.activeRoute ? 'active' : ''}`}
+                className={`nav-item ${
+                  location.pathname === item.route ? 'active' : ''
+                }`}
               >
                 {item.label}
               </li>
