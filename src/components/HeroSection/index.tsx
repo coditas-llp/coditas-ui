@@ -34,7 +34,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       style={
         overlay
           ? {
-              backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),url(${bgImg})`
+              backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, ${overlay} 100%),url(${bgImg})`
             }
           : { backgroundImage: `url(${bgImg})` }
       }

@@ -16,7 +16,11 @@ const Card = (props: ICardProps) => {
     <div className='card'>
       <img src={props.icon} alt='service-icon' />
       <h3>{props.heading}</h3>
-      <p>{props.paragraph}</p>
+      <div>
+        {props.paragraph.split('||').map((text) => (
+          <p>{text}</p>
+        ))}
+      </div>
       <button onClick={() => history(`${props.buttonRoute}`)}>
         {props.more_label}
       </button>
