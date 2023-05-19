@@ -29,15 +29,22 @@ const Leadership: React.FC<any> = (props) => {
         </div>
       </div>
       <div className='leaderInfo'>
-        <img
-          className='leaderImg'
-          alt='leaderImg'
-          src={
-            props.screenWidth > 1048
-              ? props.leadership.leaderImg
-              : props.leadership.leaderImgMobile
-          }
-        ></img>
+        <picture>
+          <source
+            media='(min-width:1049px)'
+            srcSet={props.leadership.leaderImg}
+          />
+          <source
+            media='(max-width:1048px)'
+            srcSet={props.leadership.leaderImgMobile}
+          />
+          <img
+            className='leaderImg'
+            alt='leaderImg'
+            src={props.leadership.leaderImg}
+          ></img>
+        </picture>
+
         <div className='details'>
           <h3 className='leader-name'>{props.leadership.leaderName}</h3>
           <p className='designation'>{props.leadership.leaderDesignation}</p>

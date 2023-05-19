@@ -7,7 +7,7 @@ import RemoveW from 'removeW.svg'
 
 interface IAccordionProps {
   index: number
-  image: string
+  image?: string
   title: string
   signColor: string
   content: React.ReactNode
@@ -28,7 +28,7 @@ const Accordion = (props: IAccordionProps) => {
     <div className='accordion-item'>
       <div className='accordion-head' onClick={() => handleOpen(props.index)}>
         <div className='accordion-icon-title'>
-          <img src={props.image} alt='icons' />
+          {props?.image && <img src={props.image} alt='icons' />}
           <p>{props.title}</p>
         </div>
         <div className='accordion-toggle'>
