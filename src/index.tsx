@@ -8,6 +8,7 @@ import Particles from './components/Particles'
 import VerticalCarousel from './components/VerticalCarousel'
 import Leadership from './components/Leadership'
 import Locations from './components/Locations'
+import Form from './components/Form'
 import './index.scss'
 
 export {
@@ -20,5 +21,6 @@ export {
   Particles,
   VerticalCarousel,
   Leadership,
-  Locations
+  Locations,
+  Form
 }
