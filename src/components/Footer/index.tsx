@@ -14,9 +14,11 @@ interface FooterTitleProps {
   expand: string
 }
 
-interface FooterProps {}
+interface FooterProps {
+  siteType: string
+}
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC<FooterProps> = ({ siteType }) => {
   const [expand, setExpand] = React.useState('')
   const isMobile = navigator.appVersion.includes('Mobile')
 
@@ -135,7 +137,9 @@ const Footer: React.FC<FooterProps> = () => {
                   href={data.active_link}
                 >
                   <li key={i}>{data.link}</li>
-                  <img alt='link' className='link-icon' src={link}></img>
+                  {siteType !== data.link && (
+                    <img alt='link' className='link-icon' src={link}></img>
+                  )}
                 </a>
               ))}
             </ul>

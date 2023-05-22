@@ -49,8 +49,8 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
         ))}
       </div>
       <div className='name-design'>
-        <h4>Sanjay Sathe</h4>
-        <p>Founder &amp; CEO</p>
+        <h4>{carouselContent[active].name}</h4>
+        <p>{carouselContent[active].designation}</p>
       </div>
     </div>
   )
