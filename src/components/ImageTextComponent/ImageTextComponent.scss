@@ -1,0 +1,115 @@
+@import "./variables.scss";
+
+@media screen and (min-width: 1440px) {
+    .normal-card {
+        width: 100%;
+        height: 100%;
+        @include flexProps(flex, row, null, null, 116px);
+        &.reverse-card {
+            flex-direction: row-reverse !important;
+        }
+        .main-Image {
+            img {
+                width: 484px;
+                height: 400px;
+            }
+        }
+        .content-Container {
+            @include flexProps(flex, column, flex-start, center, 24px);
+            width: 100%;
+
+            .image {
+                @include flexProps(flex, row, center, center, 0px);
+                background-color: $midnightBlue;
+                height: 56px;
+                width: 56px;
+                border-radius: 8px;
+            }
+
+            h2 {
+                @include textStyles($fontFamilyMontserrat, 700, 24px, 120%, 0.5px, $primaryWhiteColor);
+            }
+            p {
+                @include textStyles($fontFamilyRoboto, 400, 16px, 150%, 0.25px, $whiteGrey);
+            }
+        }
+    }
+}
+@media screen and (min-width: 1048px) and (max-width: 1440px) {
+    .normal-card {
+        width: 100%;
+        height: 100%;
+        @include flexProps(flex, row, null, null, 116px);
+        &.reverse-card {
+            flex-direction: row-reverse !important;
+        }
+        .main-Image {
+            img {
+                width: 360px;
+                height: 400px;
+            }
+        }
+        .content-Container {
+            @include flexProps(flex, column, flex-start, center, 24px);
+            width: 100%;
+
+            .image {
+                @include flexProps(flex, row, center, center, 0px);
+                background-color: $midnightBlue;
+                height: 56px;
+                width: 56px;
+                border-radius: 8px;
+            }
+            h2 {
+                @include textStyles($fontFamilyMontserrat, 700, 24px, 120%, 0.5px, $primaryWhiteColor);
+            }
+            p {
+                @include textStyles($fontFamilyRoboto, 400, 16px, 150%, 0.25px, $whiteGrey);
+            }
+        }
+    }
+}
+@media screen and (max-width: 1047px) {
+    .normal-card {
+        max-width: 100%;
+        height: 100%;
+        @include flexProps(flex, column, flex-start, center, 16px);
+        position: relative;
+        padding-top: 6rem;
+        &.reverse-card {
+            flex-direction: column !important;
+        }
+        .main-Image {
+            max-width: 328px;
+            max-height: 264px;
+            img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .content-Container {
+            @include flexProps(flex, column, flex-start, center, 24px);
+            width: 100%;
+
+            .image {
+                @include flexProps(flex, row, center, center, 0px);
+                background-color: $midnightBlue;
+                height: 56px;
+                width: 56px;
+                border-radius: 8px;
+                position: absolute;
+                top: 0;
+            }
+
+            p {
+                @include textStyles($fontFamilyRoboto, 400, 16px, 150%, 0.25px, $whiteGrey);
+            }
+            h2 {
+                @include textStyles($fontFamilyMontserrat, 700, 20px, 120%, 0.5px, $primaryWhiteColor);
+                position: absolute;
+                top: 64px;
+            }
+        }
+    }
+}
