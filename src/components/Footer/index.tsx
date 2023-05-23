@@ -131,10 +131,10 @@ const Footer: React.FC<FooterProps> = ({ siteType }) => {
               {/* fetching links from array using map */}
               {otherVerical.map((data: CompanyData, i: any) => (
                 <a
-                  target='_blank'
+                  target={siteType === data.link ? '_self' : '_blank'}
                   rel='noreferrer'
                   key={i}
-                  href={data.active_link}
+                  href={siteType === data.link ? '/' : data.active_link}
                 >
                   <li key={i}>{data.link}</li>
                   {siteType !== data.link && (
