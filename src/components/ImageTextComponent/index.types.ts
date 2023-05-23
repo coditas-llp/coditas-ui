@@ -5,5 +5,5 @@ export default interface IImageTextComponent {
     heading: string;
     reverseCard: boolean;
     firstImageAlt: string;
-    secondImageAlt: string;
+    secondImageAlt?: string;
 }

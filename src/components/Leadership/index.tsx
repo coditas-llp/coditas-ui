@@ -8,8 +8,9 @@ const Leadership: React.FC<any> = (props) => {
       <div className='content-section'>
         <h1>{props.leadership.heading}</h1>
         <p>{props.leadership.intro}</p>
-        <img className='quotes' alt='quotes' src={Quotes}></img>
+
         <div className='content'>
+          <img className='quotes' alt='quotes' src={Quotes}></img>
           <div>
             <p>{props.leadership.content}</p>
             <hr></hr>
