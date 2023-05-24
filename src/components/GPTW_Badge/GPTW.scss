@@ -1,12 +1,10 @@
 .parent-div {
-  position: relative;
   .great-place {
     width: 384px;
-    padding-top: 24px;
     padding-left: 8px;
     height: 85px;
     float: right;
-    position: absolute;
+    position: fixed;
     right: 0;
     z-index: 99 !important;
     bottom: 0;
@@ -30,15 +28,16 @@
     }
 
     .badgeTitle {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-weight: 400;
       font-size: 24px;
+      margin-bottom: 0.5rem;
       margin-left: 82px;
       line-height: 14px;
     }
 
     .badgeDescription {
-      font-family: "Roboto";
+      font-family: 'Roboto';
       font-weight: 400;
       font-size: 13.9px;
       margin-left: 82px;
