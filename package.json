@@ -1,6 +1,6 @@
 {
   "name": "coditas-ui",
-  "version": "1.0.61",
+  "version": "1.0.92",
   "description": "It is the in development ui library for Coditas Website UI",
   "author": "Ayushi Midha + Harish Soni",
   "repository": {
@@ -81,7 +81,10 @@
     "dist"
   ],
   "dependencies": {
+    "axios": "^1.4.0",
     "node-sass": "^6.0.1",
+    "react-google-recaptcha": "^2.1.0",
+    "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^6.11.1"
   }
 }

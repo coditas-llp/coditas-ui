@@ -61,12 +61,24 @@
       }
     }
   }
+  .name-design {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1048px) {
   .vertical-carousel {
     flex-direction: column;
     gap: 28px;
     .content {
+      .white-quotes {
+        width: 48px;
+      }
+      h4 {
+        display: none;
+      }
+      .designation {
+        display: none;
+      }
       .content__review {
         font-size: 16px;
       }
@@ -85,6 +97,14 @@
           width: 48px;
           height: 48px;
         }
+      }
+    }
+    .name-design {
+      display: block;
+      width: 100%;
+      text-align: center;
+      h4 {
+        margin: 0px;
       }
     }
   }

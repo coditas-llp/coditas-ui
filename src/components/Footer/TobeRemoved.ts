@@ -69,7 +69,7 @@ export const office_address = [
     },
     {
       link: 'Coditas Healthcare',
-      active_link: 'https://coditas.com/#/privacy-policy',
+      active_link: 'https://healthcare.coditas.com/',
     },
     {
       link: 'Coditas DevOps',

@@ -14,9 +14,11 @@ interface FooterTitleProps {
   expand: string
 }
 
-interface FooterProps {}
+interface FooterProps {
+  siteType: string
+}
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC<FooterProps> = ({ siteType }) => {
   const [expand, setExpand] = React.useState('')
   const isMobile = navigator.appVersion.includes('Mobile')
 
@@ -129,13 +131,15 @@ const Footer: React.FC<FooterProps> = () => {
               {/* fetching links from array using map */}
               {otherVerical.map((data: CompanyData, i: any) => (
                 <a
-                  target='_blank'
+                  target={siteType === data.link ? '_self' : '_blank'}
                   rel='noreferrer'
                   key={i}
-                  href={data.active_link}
+                  href={siteType === data.link ? '/' : data.active_link}
                 >
                   <li key={i}>{data.link}</li>
-                  <img alt='link' className='link-icon' src={link}></img>
+                  {siteType !== data.link && (
+                    <img alt='link' className='link-icon' src={link}></img>
+                  )}
                 </a>
               ))}
             </ul>

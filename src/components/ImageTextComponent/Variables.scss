@@ -1,0 +1,28 @@
+$fontFamilyRoboto: "Roboto";
+$fontFamilyMontserrat: "Montserrat";
+$primaryWhiteColor: #ffffff;
+$whiteGrey: #dddddd;
+$midnightBlue: #202e42;
+
+@mixin textStyles(
+    $fontFamily: $fontFamilyRoboto,
+    $fontWeight: 400,
+    $fontsize: 64px,
+    $lineHeight: 120%,
+    $letterSpacing: 0.5px,
+    $color: $primaryWhiteColor
+) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontsize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+@mixin flexProps($display, $flexDirection: null, $alignItems: null, $justifyContent: null, $gap: null) {
+    display: $display;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    flex-direction: $flexDirection;
+    gap: $gap;
+}

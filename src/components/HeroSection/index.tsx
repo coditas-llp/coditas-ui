@@ -12,6 +12,7 @@ interface HeroSectionProps {
   icons?: string[]
   buttonIcon?: string
   buttonRoute?: string
+  overlay?: string
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -23,13 +24,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   buttonText,
   icons,
   buttonIcon,
-  buttonRoute = '/contact-us'
+  buttonRoute = '/contact-us',
+  overlay
 }) => {
   const history = useNavigate()
 
   return (
     <div
-      style={{ backgroundImage: `url(${bgImg})` }}
+      style={
+        overlay
+          ? {
+              backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, ${overlay} 100%),url(${bgImg})`
+            }
+          : { backgroundImage: `url(${bgImg})` }
+      }
       className='banner-container'
     >
       <div className='banner'>

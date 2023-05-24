@@ -72,6 +72,9 @@
 @media only screen and (max-width: 1048px) {
   .location {
     padding: 64px 16px;
+    h1 {
+      font-size: 48px;
+    }
     .content {
       display: block;
       .location-card {

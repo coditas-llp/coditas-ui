@@ -1,5 +1,4 @@
 .leadership {
-  position: relative;
   background: #07172d;
   color: #ffffff;
   display: flex;
@@ -33,13 +32,17 @@
     }
     .quotes {
       position: absolute;
-      left: 79px;
-      top: 42%;
+      left: -56px;
+      top: -29px;
+      z-index: -1;
+      margin-top: 10px;
     }
     .content {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 80px;
+      z-index: 0;
       .linkedIn {
         display: flex;
         align-items: center;
@@ -87,6 +90,9 @@
       width: unset;
       .quotes {
         display: none;
+      }
+      h1 {
+        font-size: 48px;
       }
       hr {
         display: none;

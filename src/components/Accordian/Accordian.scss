@@ -1,6 +1,6 @@
 .accordion-item {
-  border-bottom: 1px solid #07172d;
-  background-color: #07172d;
+  border-bottom: 1px solid #e4eaf2;
+  transition: all 2s ease-in-out;
   .accordion-content {
     font-family: 'Roboto';
     font-style: normal;
@@ -8,9 +8,9 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.25px;
-    color: #EEEEEE;
+    color: #eeeeee;
     padding: 0px 15px 15px;
-    animation: myAni .5s ease-out;
+    animation: myAni 0.5s ease-out;
   }
   .accordion-head {
     display: flex;
@@ -40,7 +40,7 @@
         display: flex;
         align-items: center;
         letter-spacing: 0.5px;
-        color: #FFFFFF;
+        color: #ffffff;
       }
     }
     .accordion-toggle {

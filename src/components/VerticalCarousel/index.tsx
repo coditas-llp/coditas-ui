@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './VerticalCarousel.scss'
+import whiteQuotes from 'whiteQuotes.png'
 
 interface CarouselContent {
   review: string
@@ -24,6 +25,11 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
   return (
     <div className='vertical-carousel'>
       <div className='content'>
+        <img
+          src={whiteQuotes}
+          alt='white-quotes'
+          className='white-quotes'
+        ></img>
         <p
           className='content__review'
           dangerouslySetInnerHTML={{ __html: carouselContent[active]?.review }}
@@ -41,6 +47,10 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
             <img alt='client' src={data.image}></img>
           </button>
         ))}
+      </div>
+      <div className='name-design'>
+        <h4>{carouselContent[active].name}</h4>
+        <p>{carouselContent[active].designation}</p>
       </div>
     </div>
   )
