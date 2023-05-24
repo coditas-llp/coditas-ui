@@ -125,17 +125,19 @@
       width: 27px;
       height: 27px;
     }
-    .details {
-      flex-direction: column;
-      .subSection {
-        width: 100%;
-        margin-top: 16px;
-        .para {
-          font-size: 16px;
+    .active {
+      .details {
+        flex-direction: column;
+        .subSection {
+          width: 100%;
+          margin-top: 16px;
+          .para {
+            font-size: 16px;
+          }
         }
-      }
-      .personTestimony {
-        display: none;
+        .personTestimony {
+          display: none;
+        }
       }
     }
   }
