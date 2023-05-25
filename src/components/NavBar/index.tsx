@@ -68,7 +68,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 ? logoWhite || coditas_white
                 : logoBlue || coditas_blue
             }
-            onClick={onLogoClicked}
+            onClick={() => history('/')}
             alt='logo'
           />
         </div>
