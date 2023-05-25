@@ -4,7 +4,10 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import ReCAPTCHA from 'react-google-recaptcha'
 import axios from 'axios'
-const Form: React.FC = () => {
+interface FormProps {
+  siteKey: string
+}
+const Form: React.FC<FormProps> = ({ siteKey }) => {
   const [state, setState] = useState<any>({})
   const handleChange = (e: any, type: string = '') => {
     if (type !== '') {
@@ -145,7 +148,7 @@ const Form: React.FC = () => {
           <div className='label'>
             <label>Help us ensure you’re not a robot</label>
             <ReCAPTCHA
-              sitekey='6LcoWJwUAAAAAAP9my8FGDHg24SuU_MlcY_aqyRQ'
+              sitekey={siteKey}
               onChange={(value: any) => handleChange(value, 'captcha')}
             />
           </div>

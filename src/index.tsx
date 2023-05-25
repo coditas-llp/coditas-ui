@@ -11,6 +11,7 @@ import Locations from './components/Locations'
 import Form from './components/Form'
 import Testimony from './components/Testimony'
 import ImageTextComponent from './components/ImageTextComponent'
+import GPTWBadge from './components/GPTW_Badge'
 import './index.scss'
 
 export {
@@ -26,5 +27,6 @@ export {
   Locations,
   Form,
   Testimony,
-  ImageTextComponent
+  ImageTextComponent,
+  GPTWBadge
 }

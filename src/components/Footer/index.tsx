@@ -63,6 +63,9 @@ const Footer: React.FC<FooterProps> = ({ siteType }) => {
                   href={data?.active_link}
                 >
                   <li key={i}>{data.link}</li>
+                  {data.link === 'Home' && (
+                    <img alt='link' className='link-icon' src={link}></img>
+                  )}
                 </a>
               ))}
             </ul>
