@@ -13,6 +13,7 @@ interface HeroSectionProps {
   buttonIcon?: string
   buttonRoute?: string
   overlay?: string
+  gradient?: string
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -25,7 +26,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   icons,
   buttonIcon,
   buttonRoute = '/contact-us',
-  overlay
+  overlay,
+  gradient
 }) => {
   const history = useNavigate()
 
@@ -33,9 +35,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <div
       style={
         overlay
-          ? {
-              backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, ${overlay} 100%),url(${bgImg})`
-            }
+          ? gradient
+            ? {
+                backgroundImage: `${gradient},url(${bgImg})`
+              }
+            : {
+                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, ${overlay} 100%),url(${bgImg})`
+              }
           : { backgroundImage: `url(${bgImg})` }
       }
       className='banner-container'
