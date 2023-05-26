@@ -1,8 +1,10 @@
+$primary-color: #2c73d6;
+
 .navbar-wrapper {
   width: 100%;
   height: 60px;
   z-index: 99 !important;
-  background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+  background: linear-gradient(96.87deg, $primary-color, #2365bd);
   transition: all 0.2s ease-in;
   background-size: cover;
   position: fixed;
@@ -67,12 +69,12 @@
         margin-top: 1rem;
 
         &.active-b {
-          border-bottom: 2px solid #2c73d6;
+          border-bottom: 2px solid $primary-color;
         }
 
         &.show-b {
           &:hover {
-            border-bottom: 2px solid #2c73d6;
+            border-bottom: 2px solid $primary-color;
             cursor: pointer;
           }
         }
@@ -118,12 +120,11 @@
 
     .navbar_links_container {
       .nav-item {
-        color: #2c73d6;
+        color: $primary-color;
         &.active,
         &:hover {
-          border-bottom: 2px solid #2c73d6;
+          border-bottom: 2px solid $primary-color;
           cursor: pointer;
-          // color: #fff;
         }
       }
 
@@ -135,7 +136,7 @@
 
         &:hover {
           cursor: pointer;
-          border-bottom: 1px solid #2c73d6;
+          border-bottom: 1px solid $primary-color;
         }
       }
     }
@@ -167,7 +168,7 @@
       padding: 0 16px;
       margin: auto;
       justify-content: space-between;
-      background: #2c73d6;
+      background: $primary-color;
 
       .coditas_logo_container {
         padding: 10px 0;
@@ -204,7 +205,7 @@
           height: 100vh;
           text-decoration: none;
           padding-top: 15px;
-          color: #2c73d6;
+          color: $primary-color;
           min-height: 50px;
         }
       }
@@ -231,7 +232,7 @@
       border-radius: 30px;
 
       &.invertColor {
-        background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+        background: linear-gradient(96.87deg, $primary-color, #2365bd);
       }
     }
   }
@@ -245,7 +246,7 @@
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: #2c73d6;
+      background: $primary-color;
       text-align: center;
       transition: all 0.5s;
       color: #000;
@@ -274,7 +275,7 @@
 
   #menu-toggle.menu-blue {
     .rect {
-      background: #2c73d6;
+      background: $primary-color;
     }
   }
 
@@ -314,7 +315,7 @@
 
   .navbar-mobile.navmain,
   .navmain {
-    background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+    background: linear-gradient(96.87deg, $primary-color, #2365bd);
     width: 100%;
     flex-direction: column;
     height: 100%;
