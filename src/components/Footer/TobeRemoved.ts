@@ -64,20 +64,16 @@ export const office_address = [
   ];
   export const otherVerical = [
     {
-      link: 'Coditas UX',
-      active_link: 'https://coditas.com/#/privacy-policy',
-    },
-    {
       link: 'Coditas Healthcare',
       active_link: 'https://healthcare.coditas.com/',
     },
     {
       link: 'Coditas DevOps',
-      active_link: 'https://coditas.com/#/privacy-policy',
+      active_link:  'https://devops.coditas.com/',
     },
     {
       link: 'Coditas Data & AI',
-      active_link: 'https://coditas.com/#/privacy-policy',
+      active_link:  'https://ai.coditas.com/',
     },
    
   ];
