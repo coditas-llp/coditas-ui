@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import './NavBar.scss'
 import coditas_white from 'coditas_white.png'
 import coditas_blue from 'coditas_blue.png'
+// import MobileNavImg from './image.svg';
 
 interface MenuItem {
   label?: string
@@ -68,7 +69,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 ? logoWhite || coditas_white
                 : logoBlue || coditas_blue
             }
-            onClick={() => history('/')}
+            onClick={onLogoClicked}
             alt='logo'
           />
         </div>
@@ -93,6 +94,9 @@ const NavBar: React.FC<NavBarProps> = ({
               </li>
             ))}
           </ul>
+          {/* <div className='mobile_nav_image'>
+                <img src={MobileNavImg} alt='' />
+          </div> */}
         </div>
         <div
           className={`menuColor ${showMenu ? 'open' : ''} ${

@@ -1,8 +1,10 @@
+$primary-color: #2c73d6;
+
 .navbar-wrapper {
   width: 100%;
   height: 60px;
   z-index: 99 !important;
-  background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+  background: linear-gradient(96.87deg, $primary-color, #2365bd);
   transition: all 0.2s ease-in;
   background-size: cover;
   position: fixed;
@@ -67,12 +69,12 @@
         margin-top: 1rem;
 
         &.active-b {
-          border-bottom: 2px solid #2c73d6;
+          border-bottom: 2px solid $primary-color;
         }
 
         &.show-b {
           &:hover {
-            border-bottom: 2px solid #2c73d6;
+            border-bottom: 2px solid $primary-color;
             cursor: pointer;
           }
         }
@@ -118,10 +120,10 @@
 
     .navbar_links_container {
       .nav-item {
-        color: #2c73d6;
+        color: $primary-color;
         &.active,
         &:hover {
-          border-bottom: 2px solid #2c73d6;
+          border-bottom: 2px solid $primary-color;
           cursor: pointer;
         }
       }
@@ -134,7 +136,7 @@
 
         &:hover {
           cursor: pointer;
-          border-bottom: 1px solid #2c73d6;
+          border-bottom: 1px solid $primary-color;
         }
       }
     }
@@ -160,12 +162,13 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .navbar-wrapper {
     transition: all 0.4s ease-in;
-
+      
     .navbar_container {
-      max-width: 90%;
-      padding: 0;
+      max-width: 100%;
+      padding: 0 16px;
       margin: auto;
       justify-content: space-between;
+      background: transparent;
 
       .coditas_logo_container {
         padding: 10px 0;
@@ -189,6 +192,11 @@
         .nav-item {
           text-align: left;
           font-size: 18px;
+          color: white;
+          padding: 16px 4px;
+          &.active, &:hover {
+              border-bottom: 2px solid white;
+          }
         }
 
         ul li span {
@@ -197,8 +205,14 @@
           height: 100vh;
           text-decoration: none;
           padding-top: 15px;
-          color: #2c73d6;
+          color: $primary-color;
           min-height: 50px;
+        }
+      }
+
+      .change-color {
+        .navbar_container {
+          background: $primary-color;
         }
       }
 
@@ -224,7 +238,7 @@
       border-radius: 30px;
 
       &.invertColor {
-        background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+        background: linear-gradient(96.87deg, $primary-color, #2365bd);
       }
     }
   }
@@ -234,11 +248,11 @@
       top: 54px;
       left: 0;
       z-index: 100;
-      padding: 0 10px;
+      padding: 0 12px;
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: white;
+      background: $primary-color;
       text-align: center;
       transition: all 0.5s;
       color: #000;
@@ -267,7 +281,7 @@
 
   #menu-toggle.menu-blue {
     .rect {
-      background: #2c73d6;
+      background: $primary-color;
     }
   }
 
@@ -307,7 +321,7 @@
 
   .navbar-mobile.navmain,
   .navmain {
-    background: linear-gradient(96.87deg, #2c73d6, #2365bd);
+    background: linear-gradient(96.87deg, $primary-color, #2365bd);
     width: 100%;
     flex-direction: column;
     height: 100%;
@@ -336,6 +350,7 @@
       margin-right: 16px;
       margin-top: 1rem;
       text-align: left;
+      color: white;
     }
   }
 }

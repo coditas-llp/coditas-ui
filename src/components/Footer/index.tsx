@@ -1,5 +1,5 @@
 import React from 'react'
-import { company, work, otherVerical, others } from './TobeRemoved'
+import { company, work, otherVerical, others } from './footerContent'
 import './Footer.scss'
 import link from 'link.svg'
 interface CompanyData {

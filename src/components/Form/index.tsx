@@ -70,6 +70,7 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
           <label>My name is</label>
           <input
             required
+            placeholder='Full name'
             name='name'
             value={state?.name}
             onChange={handleChange}
@@ -83,6 +84,7 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
               required: true,
               autoFocus: true
             }}
+            placeholder='+91-0000-0000-00'
             value={state?.phone}
             onChange={(phone) => handleChange(phone, 'phone')}
           ></PhoneInput>{' '}
@@ -94,6 +96,7 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
             required
             name='email'
             type='email'
+            placeholder='example@mail.com'
             value={state?.email}
             onChange={handleChange}
           ></input>
@@ -102,7 +105,7 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
           <label>Preferred cloud provider(Optional)</label>
           <select name='cloud' value={state?.cloud} onChange={handleChange}>
             <option selected disabled>
-              Please choose one option
+              Cloud provider
             </option>
             <option>AWS</option>
             <option>GCP</option>
@@ -113,7 +116,7 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
           <label>Budget Range(Optional)</label>
           <select name='budget' value={state?.budget} onChange={handleChange}>
             <option selected disabled>
-              Please choose one option
+              Budget range
             </option>
             <option>10-15</option>
             <option>15-20</option>
@@ -128,11 +131,11 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
             onChange={handleChange}
           >
             <option selected disabled>
-              Please choose one option
+              4 Months
             </option>
-            <option>1 month</option>
-            <option>2 month</option>
-            <option>3 month</option>
+            <option>1 Months</option>
+            <option>2 Months</option>
+            <option>4 Months</option>
           </select>
         </div>
         <div className='form-item'>
@@ -141,6 +144,7 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
             value={state?.message}
             required
             name='message'
+            placeholder='Enter message...'
             onChange={handleChange}
           />
         </div>
