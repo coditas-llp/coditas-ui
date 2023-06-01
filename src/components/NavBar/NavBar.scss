@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 $primary-color: #2c73d6;
 
 .navbar-wrapper {
@@ -121,6 +124,7 @@ $primary-color: #2c73d6;
     .navbar_links_container {
       .nav-item {
         color: $primary-color;
+
         &.active,
         &:hover {
           border-bottom: 2px solid $primary-color;
@@ -162,7 +166,7 @@ $primary-color: #2c73d6;
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .navbar-wrapper {
     transition: all 0.4s ease-in;
-      
+
     .navbar_container {
       max-width: 100%;
       padding: 0 16px;
@@ -194,8 +198,10 @@ $primary-color: #2c73d6;
           font-size: 18px;
           color: white;
           padding: 16px 4px;
-          &.active, &:hover {
-              border-bottom: 2px solid white;
+
+          &.active,
+          &:hover {
+            border-bottom: 2px solid white;
           }
         }
 

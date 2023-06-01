@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import './NavBar.scss'
-import coditas_white from 'coditas_white.png'
-import coditas_blue from 'coditas_blue.png'
+import coditas_white from './coditas_white.png'
+import coditas_blue from './coditas_blue.png'
 // import MobileNavImg from './image.svg';
 
 interface MenuItem {
@@ -54,11 +54,10 @@ const NavBar: React.FC<NavBarProps> = ({
     <div
       className={`navbar-wrapper
      ${changeColor || showMenu ? 'change-color' : ''}
-      ${
-        bgColor
+      ${bgColor
           ? bgColor === 'transparent' && (!changeColor ? 'bgTrans' : 'bgBlue')
           : 'bgBlue'
-      }`}
+        }`}
     >
       <div className='navbar_container'>
         <div className='coditas_logo_container'>
@@ -86,9 +85,8 @@ const NavBar: React.FC<NavBarProps> = ({
                   }
                   history(item.route ? item.route : '')
                 }}
-                className={`nav-item ${
-                  location.pathname === item.route ? 'active' : ''
-                }`}
+                className={`nav-item ${location.pathname === item.route ? 'active' : ''
+                  }`}
               >
                 {item.label}
               </li>
@@ -99,9 +97,8 @@ const NavBar: React.FC<NavBarProps> = ({
           </div> */}
         </div>
         <div
-          className={`menuColor ${showMenu ? 'open' : ''} ${
-            !changeColor ? '' : 'menu-blue'
-          }`}
+          className={`menuColor ${showMenu ? 'open' : ''} ${!changeColor ? '' : 'menu-blue'
+            }`}
           id='menu-toggle'
           onClick={() => setShowMenu(!showMenu)}
         >
