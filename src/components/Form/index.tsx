@@ -80,7 +80,6 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
         </div>
         <div className='form-item'>
           <label>My phone number is</label>
-          {/* <div className='phone-input'> */}
           <PhoneInput
             inputProps={{
               name: 'phone',
@@ -91,7 +90,6 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
             value={state?.phone}
             onChange={(phone) => handleChange(phone, 'phone')}
           ></PhoneInput>
-          {/* </div> */}
         </div>
         <div className='form-item'>
           <label>Reach me at</label>
