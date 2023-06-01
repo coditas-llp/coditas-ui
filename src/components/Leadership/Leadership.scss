@@ -27,8 +27,7 @@
     hr {
       width: 30%;
       float: left;
-      border-width: 2px;
-      border-color: #2c74d6;
+      border: 2px solid #2c74d6;
     }
     .quotes {
       position: absolute;
@@ -47,6 +46,7 @@
         display: flex;
         align-items: center;
         gap: 16px;
+        width: 100%;
         .designation {
           font-family: 'Roboto';
           font-style: normal;
