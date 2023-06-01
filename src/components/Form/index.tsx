@@ -63,8 +63,10 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
 
   return (
     <div className='contact-us-form'>
-      <h1>Have any queries?</h1>
-      <label>Fill the form and we’ll reach out to you soon.</label>
+      <div className='header'>
+        <h1>Have any queries?</h1>
+        <label>Fill the form and we’ll reach out to you soon.</label>
+      </div>
       <form onSubmit={handleSubmit} className='form'>
         <div className='form-item'>
           <label>My name is</label>
@@ -77,7 +79,8 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
           ></input>{' '}
         </div>
         <div className='form-item'>
-          <label>My phone number is</label>{' '}
+          <label>My phone number is</label>
+          {/* <div className='phone-input'> */}
           <PhoneInput
             inputProps={{
               name: 'phone',
@@ -87,9 +90,9 @@ const Form: React.FC<FormProps> = ({ siteKey }) => {
             placeholder='+91-0000-0000-00'
             value={state?.phone}
             onChange={(phone) => handleChange(phone, 'phone')}
-          ></PhoneInput>{' '}
+          ></PhoneInput>
+          {/* </div> */}
         </div>
-
         <div className='form-item'>
           <label>Reach me at</label>
           <input
