@@ -1,8 +1,8 @@
 import React from "react";
 import "./Leadership.scss";
-import linkedIn from "./linkedIn.svg";
-import linkedInMobile from "./linkedInMobile.svg";
-import Quotes from "./quotes.png";
+import linkedIn from "linkedIn.svg";
+import linkedInMobile from "linkedInMobile.svg";
+import Quotes from "quotes.png";
 const Leadership: React.FC<any> = (props) => {
   return (
     <div className='leadership'>
