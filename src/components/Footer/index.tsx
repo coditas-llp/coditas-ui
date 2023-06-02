@@ -1,5 +1,5 @@
 import React from 'react'
-import { company, work, otherVerical, others } from './footerContent'
+import { company, work, ourVertical, policy } from './footerContent'
 import './Footer.scss'
 import link from 'link.svg'
 interface CompanyData {
@@ -63,22 +63,19 @@ const Footer: React.FC<FooterProps> = ({ siteType }) => {
                   href={data?.active_link}
                 >
                   <li key={i}>{data.link}</li>
-                  {data.link === 'Home' && (
-                    <img alt='link' className='link-icon' src={link}></img>
-                  )}
                 </a>
               ))}
             </ul>
           </div>
           <div className={'links'}>
             <FooterTitle
-              label='Work'
+              label='Our Work'
               isMobile={isMobile}
               setExpand={setExpand}
               expand={expand}
             />
             <ul
-              className={`${'mobile-view'}  ${expand === 'Work' && 'expanded'}`}
+              className={`${'mobile-view'}  ${expand === 'Our Work' && 'expanded'}`}
             >
               {/* fetching links from array using map */}
               {work.map((data: CompanyData, i: any) => (
@@ -95,18 +92,18 @@ const Footer: React.FC<FooterProps> = ({ siteType }) => {
           </div>
           <div className={'links'}>
             <FooterTitle
-              label='Others'
+              label='Policy'
               isMobile={isMobile}
               setExpand={setExpand}
               expand={expand}
             />
             <ul
               className={`${'mobile-view'}  ${
-                expand === 'Others' && 'expanded'
+                expand === 'Policy' && 'expanded'
               }`}
             >
               {/* fetching links from array using map */}
-              {others.map((data: CompanyData, i: any) => (
+              {policy.map((data: CompanyData, i: any) => (
                 <a
                   target='_blank'
                   rel='noreferrer'
@@ -121,18 +118,18 @@ const Footer: React.FC<FooterProps> = ({ siteType }) => {
           </div>
           <div className={'links'}>
             <FooterTitle
-              label='Other vertical'
+              label='Our Vertical'
               isMobile={isMobile}
               setExpand={setExpand}
               expand={expand}
             />
             <ul
               className={`${'mobile-view'}  ${
-                expand === 'Other vertical' && 'expanded'
+                expand === 'Our Vertical' && 'expanded'
               }`}
             >
               {/* fetching links from array using map */}
-              {otherVerical.map((data: CompanyData, i: any) => (
+              {ourVertical.map((data: CompanyData, i: any) => (
                 <a
                   target={siteType === data.link ? '_self' : '_blank'}
                   rel='noreferrer'
