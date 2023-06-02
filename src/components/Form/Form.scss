@@ -1,161 +1,203 @@
 .contact-us-form {
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  width: 100%;
   padding: 64px 128px;
-  h1 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
 
-    letter-spacing: 0.5px;
-  }
-  p {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    /* identical to box height, or 24px */
-
-    letter-spacing: 0.25px;
-  }
-  .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-gap: 18px;
-    margin-top: 32px;
-
-    .form-item {
-      margin-bottom: 24px;
-
-      label {
-        margin: 0px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 130%;
-        letter-spacing: 0.25px;
-        color: #07172d;
-      }
-      .react-tel-input {
-        .form-control {
-          left: 37px;
-          height: 41px;
-          width: 83%;
-        }
-        .flag-dropdown:focus {
-          border: 1px solid #2c74d6;
-        }
-      }
-      input {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 12px;
-        gap: 8px;
-        width: 85%;
-        background: #ffffff;
-        border: 1px solid #b6bbc2;
-        border-radius: 4px;
-        &:focus-visible {
-          border: 1px solid #2c74d6;
-          outline: unset;
-        }
-      }
-      select {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 12px;
-        gap: 8px;
-        width: 89%;
-        background: #ffffff;
-        border: 1px solid #b6bbc2;
-        border-radius: 4px;
-        &:focus-visible {
-          border: 1px solid #2c74d6;
-          outline: unset;
-        }
-      }
-
-      textarea {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 12px;
-        height: 84px;
-        width: 85%;
-        /* Colors/Ada Theme/Background/White */
-
-        background: #ffffff;
-        /* Colors/Grey/400 */
-
-        border: 1px solid #bababa;
-        border-radius: 4px;
-        &:focus-visible {
-          border: 1px solid #2c74d6;
-          outline: unset;
-        }
-      }
-    }
-    .verify {
+  .header {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      .label {
-        display: flex;
-        flex-direction: column;
-        row-gap: 4px;
-        label {
-          margin: 0px;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      h1 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 64px;
+          line-height: 120%;
+
+          letter-spacing: 0.5px;
+      }
+      p {
           font-family: Roboto;
           font-style: normal;
           font-weight: 500;
-          font-size: 12px;
-          line-height: 130%;
+          font-size: 16px;
+          line-height: 150%;
           letter-spacing: 0.25px;
-          color: #07172d;
-        }
       }
-      button {
-        padding: 10px 0px;
-        width: 100px;
-        height: 40px;
-        color: #ffffff;
-        border: 1px solid #2c74d6;
-        background: #2c74d6;
-        border-radius: 4px;
-        margin-left: 20px;
+  }
+  .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 16px;
+      grid-row-gap: 24px;
+      height: 100%;
+      width: 100%;
 
-        &:disabled {
-          background-color: #ebebe4;
-          border: 1px solid #ebebe4;
-        }
+      .form-item {
+        margin-top: 24px;
+          label {
+              margin: 0px;
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 130%;
+              letter-spacing: 0.25px;
+              color: #07172d;
+          }
+
+          .react-tel-input {
+              width: 100%;
+              height: 48px;
+              .form-control {
+                  border-radius: 4px;
+              }
+              .flag-dropdown:focus {
+                  border: 1px solid #2c74d6;
+              }
+          }
+
+          input {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 12px;
+              gap: 8px;
+              width: 100%;
+              height: 48px;
+              background: #ffffff;
+              border: 1px solid #b6bbc2;
+              border-radius: 4px;
+              &:focus-visible {
+                  border: 1px solid #2c74d6;
+                  outline: unset;
+              }
+          }
+          input::placeholder {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+              letter-spacing: 0.25px;
+              color: #8c8c8c;
+          }
+          select {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 12px;
+              gap: 8px;
+              width: 100%;
+              height: 48px;
+              background: #ffffff;
+              border: 1px solid #b6bbc2;
+              border-radius: 4px;
+              &:focus-visible {
+                  border: 1px solid #2c74d6;
+                  outline: unset;
+              }
+          }
+          select::placeholder {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+              letter-spacing: 0.25px;
+              color: #8c8c8c;
+          }
+
+          textarea {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+              padding: 12px;
+              height: 84px;
+              width: 100%;
+              background: #ffffff;
+              border: 1px solid #bababa;
+              border-radius: 4px;
+              &:focus-visible {
+                  border: 1px solid #2c74d6;
+                  outline: unset;
+              }
+          }
+          textarea::placeholder {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+              letter-spacing: 0.25px;
+              color: #8c8c8c;
+          }
       }
-    }
+      .verify {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          .label {
+              display: flex;
+              flex-direction: column;
+              row-gap: 4px;
+              label {
+                  margin: 0px;
+                  font-family: Roboto;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 130%;
+                  letter-spacing: 0.25px;
+                  color: #07172d;
+              }
+          }
+          button {
+              padding: 10px 0px;
+              width: 100px;
+              height: 40px;
+              color: #ffffff;
+              border: 1px solid #2c74d6;
+              background: #2c74d6;
+              border-radius: 4px;
+              margin-left: 20px;
+
+              &:disabled {
+                  background-color: #ebebe4;
+                  border: 1px solid #ebebe4;
+              }
+          }
+      }
   }
 }
 @media only screen and (max-width: 1048px) {
   .contact-us-form {
-    padding: 64px 16px;
-    h1 {
-      font-size: 48px;
-    }
-    .form {
-      display: block;
-      margin-top: 40px;
-      .verify {
-        display: block;
-        button {
-          padding: 10px 0px;
-          width: 100%;
-
-          margin-left: 0px;
-          margin-top: 20px;
-        }
+      padding: 64px 16px;
+      h1 {
+          font-size: 48px;
       }
-    }
+      .form {
+          display: block;
+          margin-top: 40px;
+          .verify {
+              display: block;
+              button {
+                  padding: 10px 0px;
+                  width: 100%;
+
+                  margin-left: 0px;
+                  margin-top: 20px;
+              }
+          }
+      }
   }
 }
