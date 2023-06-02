@@ -88,7 +88,7 @@
 @media screen and (max-width: 1024px) {
   .banner-container {
     .banner {
-      height: 50vh;
+      height: 60vh;
       background-size: cover;
       .banner-content-container {
         padding: 0px;
@@ -99,7 +99,7 @@
           left: 0;
           bottom: 0;
           max-width: 100%;
-          padding: 20px;
+          padding: 64px 16px;
           gap: 16px;
           h1 {
             font-size: 32px;
