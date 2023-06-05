@@ -53,7 +53,8 @@ const NavBar: React.FC<NavBarProps> = ({
   return (
     <div
       className={`navbar-wrapper
-     ${changeColor || showMenu ? 'change-color' : ''}
+     ${changeColor ? 'change-color' : ''}
+     ${ window.innerWidth < 482 && showMenu ? 'change-nav-color' : 'normal-color' }
       ${
         bgColor
           ? bgColor === 'transparent' && (!changeColor ? 'bgTrans' : 'bgBlue')
@@ -65,9 +66,11 @@ const NavBar: React.FC<NavBarProps> = ({
           <img
             className={'coditas_logo'}
             src={
+              window.innerWidth < 482 && showMenu ? logoWhite || coditas_white
+              :
               !changeColor
                 ? logoWhite || coditas_white
-                : logoBlue || coditas_blue
+                : logoBlue || coditas_blue 
             }
             onClick={onLogoClicked}
             alt='logo'
@@ -100,7 +103,7 @@ const NavBar: React.FC<NavBarProps> = ({
         </div>
         <div
           className={`menuColor ${showMenu ? 'open' : ''} ${
-            !changeColor ? '' : 'menu-blue'
+            !changeColor ? '' : showMenu ? 'normal-color' : 'menu-blue'
           }`}
           id='menu-toggle'
           onClick={() => setShowMenu(!showMenu)}
