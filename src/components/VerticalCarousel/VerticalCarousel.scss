@@ -108,7 +108,7 @@
       }
     }
     .vertical-carousel__tabs {
-      width: unset;
+      width: calc(100% - 32px);
       margin-top: 28px;
       button {
         margin: 10px;
