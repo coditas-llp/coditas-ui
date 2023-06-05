@@ -1,5 +1,5 @@
+import React from "react";
 import './Card.scss'
-import { useNavigate } from 'react-router-dom'
 import star_bullet_icon from './star_bullet_icon.png';
 
 interface ICardProps {
@@ -11,7 +11,6 @@ interface ICardProps {
 }
 
 const Card = (props: ICardProps) => {
-  const history = useNavigate();
   return (
     <div className='card'>
       <div className='image-container'>

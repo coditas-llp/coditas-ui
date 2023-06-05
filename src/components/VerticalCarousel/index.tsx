@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import "./VerticalCarousel.scss";
 import whiteQuotes from "./whiteQuotes.png";
 
@@ -41,9 +41,7 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
       </div>
       <div className="vertical-carousel__tabs">
         {carouselContent.map((data: CarouselContent, index: number) => (
-          <>
-            {console.log("hereee=....", active.current, index)}
-
+          <Fragment>
             {active.current === 0 && index === 0 && (
               <button
                 onClick={() =>
@@ -85,7 +83,7 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
                   <img alt="client" src={carouselContent[0].image}></img>
                 </button>
               )}
-          </>
+          </Fragment>
         ))}
       </div>
       <div className="name-design">

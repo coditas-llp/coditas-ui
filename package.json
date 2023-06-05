@@ -1,6 +1,6 @@
 {
   "name": "coditas-ui",
-  "version": "1.1.6",
+  "version": "1.1.12",
   "description": "It is the in development ui library for Coditas Website UI",
   "author": "Ayushi Midha + Harish Soni",
   "repository": {
@@ -25,6 +25,7 @@
     ]
   },
   "scripts": {
+    "postpublish": "npm-publish-slack-webhook https://hooks.slack.com/services/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",
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
@@ -74,17 +75,17 @@
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
     "typescript": "^5.0.4"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
+    "@n370/npm-publish-slack-webhook": "^0.1.1",
     "axios": "^1.4.0",
-    "node-sass": "^6.0.1",
     "react-google-recaptcha": "^2.1.0",
     "react-phone-input-2": "^2.15.1",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "sass": "^1.62.1"
   }
 }
