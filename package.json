@@ -25,7 +25,6 @@
     ]
   },
   "scripts": {
-    "postpublish": "npm-publish-slack-webhook https://hooks.slack.com/services/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",
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
