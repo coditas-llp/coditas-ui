@@ -159,6 +159,13 @@ $primary-color: #2c73d6;
   background: transparent;
 }
 
+@media only screen and (min-device-width: 480px) {
+  .navbar-wrapper .navbar_container .navbar_links_container .nav-item {
+    padding:0px;
+    margin: 20px 0px 0px 32px;
+  }
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .navbar-wrapper {
     transition: all 0.4s ease-in;
