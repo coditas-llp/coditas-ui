@@ -5,11 +5,11 @@
   justify-content: space-between;
   .content {
     .content__review {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
       font-size: 32px;
-      height: 180px;
+      height: 260px;
       line-height: 140%;
       letter-spacing: 0.25px;
       color: #111111;
@@ -19,7 +19,7 @@
       }
     }
     h4 {
-      font-family: "Roboto";
+      font-family: 'Roboto';
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -30,7 +30,7 @@
     }
     .designation {
       margin: 0px;
-      font-family: "Roboto";
+      font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -50,7 +50,8 @@
       height: 60px;
       opacity: 0.9;
       transition: opacity 0.5s;
-
+      border-radius: 50%;
+      border: unset;
       img {
         border-radius: 50%;
         transition: width 1s, height 1s;
@@ -107,7 +108,7 @@
       }
     }
     .vertical-carousel__tabs {
-      width: unset;
+      width: calc(100% - 32px);
       margin-top: 28px;
       button {
         margin: 10px;
