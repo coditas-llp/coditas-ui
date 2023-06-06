@@ -1,6 +1,6 @@
 import React from "react";
 import './Card.scss'
-import star_bullet_icon from './star_bullet_icon.png';
+import star_bullet_icon from './star_bullet_icon.svg';
 
 interface ICardProps {
   icon?: string
