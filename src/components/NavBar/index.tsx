@@ -62,7 +62,7 @@ const NavBar: React.FC<NavBarProps> = ({
       }`}
     >
       <div className='navbar_container'>
-        <div className='coditas_logo_container'>
+        <div className={`coditas_logo_container ${location.pathname === '/' ? 'no-hand-cursor': ''}`}>
           <img
             className={'coditas_logo'}
             src={
