@@ -90,7 +90,7 @@ const NavBar: React.FC<NavBarProps> = ({
                   history(item.route ? item.route : '')
                 }}
                 className={`nav-item ${
-                  location.pathname === item.route ? 'active' : ''
+                  location.pathname.includes(item.route ? item.route : '') ? 'active' : ''
                 }`}
               >
                 {item.label}
