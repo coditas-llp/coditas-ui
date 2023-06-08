@@ -30,6 +30,13 @@ $primary-color: #2c73d6;
       }
     }
 
+    .no-hand-cursor
+    {
+      &:hover{
+        cursor:unset;
+      }
+    }
+
     .menu-toggle {
       display: none;
 
