@@ -17,7 +17,7 @@ const Leadership: React.FC<any> = (props) => {
             <hr></hr>
             <br></br>
             <div className='linkedIn'>
-              <a href={props.linkedInURL} target='_blank' rel='noreferrer'>
+              <a href={props.leadership.linkedInURL} target='_blank' rel='noreferrer'>
                 <img src={linkedIn} alt='linkedin'></img>
               </a>
               <div>
