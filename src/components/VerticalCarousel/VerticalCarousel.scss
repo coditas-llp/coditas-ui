@@ -2,13 +2,14 @@
   display: flex;
   gap: 80px;
   align-items: baseline;
-
+  justify-content: space-between;
   .content {
     .content__review {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
       font-size: 32px;
+      height: 260px;
       line-height: 140%;
       letter-spacing: 0.25px;
       color: #111111;
@@ -39,23 +40,45 @@
     }
   }
   .vertical-carousel__tabs {
+    width: 120px;
     text-align: center;
 
     button {
-      border-radius: 50%;
+      background: transparent;
       margin: 20px;
+      width: 60px;
+      height: 60px;
+      opacity: 0.9;
+      transition: opacity 0.5s;
+      border-radius: 50%;
       border: unset;
       img {
         border-radius: 50%;
+        transition: width 1s, height 1s;
         width: 60px;
         height: 60px;
         opacity: 0.2;
       }
     }
+    .hide {
+      display: none;
+      height: 8px;
+
+      align-items: center;
+      background: linear-gradient(96.18deg, #d1e2fb -0.09%, #f4f7fa 84.36%);
+      width: 8px;
+    }
     .active {
+      display: flex;
+      height: 92px;
+
+      align-items: center;
+      background: linear-gradient(96.18deg, #d1e2fb -0.09%, #f4f7fa 84.36%);
+      width: 92px;
       img {
         border-radius: 50%;
         width: 80px;
+
         height: 80px;
         opacity: 1;
       }
@@ -81,10 +104,12 @@
       }
       .content__review {
         font-size: 16px;
+        height: 100px;
       }
     }
     .vertical-carousel__tabs {
-      margin: auto;
+      width: calc(100% - 32px);
+      margin-top: 28px;
       button {
         margin: 10px;
         img {
@@ -93,6 +118,10 @@
         }
       }
       .active {
+        display: unset;
+        padding: 0;
+        width: 56px;
+        height: 56px;
         img {
           width: 48px;
           height: 48px;
@@ -103,6 +132,7 @@
       display: block;
       width: 100%;
       text-align: center;
+
       h4 {
         margin: 0px;
       }
